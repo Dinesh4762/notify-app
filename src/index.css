@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgba(255, 0, 0, 0.477); */
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.active {
+  background-color: rgb(203 213 225);
+  border: 2px solid black;
+  border-radius: 3px;
+}
+.inactive {
+  background-color: rgb(210, 247, 241);
+}
+.copy:active .copy-icon {
+  width: 16px;
+  height: 16px;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 24px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: #c0bdbd;
+}
+/* .notes-container li:nth-child(4n){
+  background-color: #D2B48C;
+}
+.notes-container li:nth-child(4n+1){
+  background-color: #dfd78f;
+}
+.notes-container li:nth-child(4n+2){
+  background-color: #D8BFD8;
+}
+.notes-container li:nth-child(4n+3){
+  background-color: #F5DEB3;
+} */
+
+.task{
+   background: linear-gradient(-60deg, #909da4, #adc0be);
+}
+.fade-out {
+  animation: fade-out 0.25s forwards;
+}
+
+/* Keyframe animations */
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
